@@ -26,13 +26,12 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+for column = 1:size(X_norm,2)
+  mu(column) = mean(X_norm(:, column));
+  sigma(column) = std(X_norm(:, column));
+endfor
 
-
-
-
-
-
-
+X_norm = (X_norm - mu) ./ sigma;
 
 % ============================================================
 
